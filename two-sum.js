@@ -1,11 +1,13 @@
+// brute force
+
 const getTwoSum = (arr, target) => {
 	for (let i = 0; i < arr.length; i++) {
-		let p1 = arr[i];
-		let newTarget = target - p1;
+		let p1 = i;
+		let newTarget = target - arr[p1];
 		for (let j = i + 1; j < arr.length; j++) {
-			let p2 = arr[j]
-			if (p2 === newTarget) {
-				return [i, j];
+			let p2 = j
+			if (arr[p2] === newTarget) {
+				return [p1, p2];
 			}
 		}
 	}
