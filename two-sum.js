@@ -16,3 +16,22 @@ const getTwoSum = (arr, target) => {
 const indexes = getTwoSum([1, 3, 7, 9, 2], 11);
 
 console.log(indexes);
+
+
+
+// hash table
+
+const getTwoSumHashed = (arr, target) => {
+	const hashedArr = {};
+	for (let i = 0; i < arr.length; i++) {
+		if (hashedArr.hasOwnProperty(arr[i])) {
+			return [hashedArr[arr[i]], i];
+		}
+		let newTarget = target - arr[i];
+		hashedArr[newTarget] = i;
+	}
+}
+
+const indexesOp = getTwoSumHashed([1, 3, 7, 9, 2], 11);
+
+console.log(indexesOp);
