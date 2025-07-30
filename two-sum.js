@@ -11,6 +11,7 @@ const getTwoSum = (arr, target) => {
 			}
 		}
 	}
+	return null;
 }
 
 const indexes = getTwoSum([1, 3, 7, 9, 2], 11);
@@ -30,6 +31,7 @@ const getTwoSumHashed = (arr, target) => {
 		let newTarget = target - arr[i];
 		hashedArr[newTarget] = i;
 	}
+	return null;
 }
 
 const indexesOp = getTwoSumHashed([1, 3, 7, 9, 2], 11);
