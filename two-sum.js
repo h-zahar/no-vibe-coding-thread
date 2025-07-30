@@ -3,7 +3,8 @@ const getTwoSum = (arr, target) => {
 		let p1 = arr[i];
 		let newTarget = target - p1;
 		for (let j = i + 1; j < arr.length; j++) {
-			if (arr[j] === newTarget) {
+			let p2 = arr[j]
+			if (p2 === newTarget) {
 				return [i, j];
 			}
 		}
