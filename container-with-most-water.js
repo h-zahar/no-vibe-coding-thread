@@ -1,7 +1,7 @@
 // brute force
 
 const getAreaWithMostWater = (arr) => {
-	const listOfAreas = [];
+	const listOfAreas = [0];
 	for (let i = 0; i < arr.length; i++) {
 		let p1 = i;
 		for (let j = i + 1; j < arr.length; j++) {
@@ -13,6 +13,6 @@ const getAreaWithMostWater = (arr) => {
 	return Math.max(...listOfAreas);
 };
 
-const areaWithMostWater = getAreaWithMostWater([1, 8, 3, 5, 9]); 
+const areaWithMostWater = getAreaWithMostWater([7, 1, 2, 3, 9]); 
 
 console.log(areaWithMostWater);
