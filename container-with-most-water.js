@@ -7,9 +7,7 @@ const getAreaWithMostWater = (arr) => {
 		for (let j = i + 1; j < arr.length; j++) {
 			let p2 = j;
 			let area = Math.min(arr[p1], arr[p2]) * (p2 - p1);
-			if (area > maxArea) {
-				maxArea = area;
-			}
+			maxArea = Math.max(area, maxArea);
 		}
 	}
 	return maxArea;
