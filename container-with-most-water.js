@@ -2,11 +2,11 @@
 
 const getAreaWithMostWater = (arr) => {
 	let maxArea = 0;
-	for (let i = 0; i < arr.length; i++) {
-		let p1 = i;
-		for (let j = i + 1; j < arr.length; j++) {
-			let p2 = j;
-			let area = Math.min(arr[p1], arr[p2]) * (p2 - p1);
+	for (let p1 = 0; p1 < arr.length; p1++) {
+		for (let p2 = p1 + 1; p2 < arr.length; p2++) {
+			const height = Math.min(arr[p1], arr[p2]);
+			const width = (p2 - p1);
+			const area = width * height;
 			maxArea = Math.max(area, maxArea);
 		}
 	}
