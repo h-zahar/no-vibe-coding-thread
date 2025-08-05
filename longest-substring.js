@@ -8,17 +8,14 @@ const getLongestNonRepeatedSubstring = (string) => {
 		let count = 0;
 		for (let j = i; j < strArr.length; j++) {
 			if (memory?.[strArr[j]]) {
-				if (count > longest) {
-					longest = count;
-				}
 				break;
 			} else {
 				memory[strArr[j]] = 1;
 				count++;
-               if (count > longest) {
-               	longest = count;
-               }
 			}
+			if (count > longest) {
+           	longest = count;
+           }
 		}
 	}
 	return longest;
