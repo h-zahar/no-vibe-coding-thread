@@ -15,6 +15,9 @@ const getLongestNonRepeatedSubstring = (string) => {
 			} else {
 				memory[strArr[j]] = 1;
 				count++;
+               if (count > longest) {
+               	longest = count;
+               }
 			}
 		}
 	}
