@@ -27,6 +27,8 @@ console.log(isValid);
 
 // two pointers
 
+// need to update code structure tho
+
 const checkIfPalindrome = (strArr, lP, rP, lifeLine = 0) => {
 	while (!(lP === rP || rP - lP === 1) && lifeLine <= 2){
 		if (strArr[lP] !== strArr[rP]) {
