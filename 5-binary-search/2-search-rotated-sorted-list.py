@@ -15,13 +15,6 @@ A solution that runs in O(n) time is trivial, can you write an algorithm that ru
 import math 
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        if len(nums) == 1 and nums[0] == target:
-            return 0
-        if len(nums) == 2:
-            if nums[0] == target:
-                return 0
-            elif nums[1] == target:
-                return 1
         l = 0
         r = len(nums) - 1
 
